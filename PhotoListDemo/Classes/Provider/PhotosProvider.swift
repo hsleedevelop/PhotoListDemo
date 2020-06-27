@@ -24,15 +24,5 @@ final class PhotosProvider: APIProvider<UnsplashAPI> {
         return request(api: .search(page, pageSize, keyword))
             .map(SearchResult.self)
     }
-    
-    /// 사용자 프로필 정보 요청
-    ///
-    /// - Parameter userId: 사용자 아이디 - Sandbox에서는 self만 제공
-    /// - Returns: 사용자 모델
-//    func user(_ userId: String) -> Observable<User?> {
-//        return request(api: .user(userId)) //API에서 self만 제공함.
-//            .map(UserResponse.self)
-//            .map { $0.data }
-//    }
 }
 

@@ -25,14 +25,11 @@ extension APIProvider {
         guard let url = URL(string: api.url) else {
             return Observable.error(NetworkError.error("잘못된 URL입니다."))
         }
-        
         #if DEBUG
         print("url=\(url)")
         #endif
         
-        //또는 -> URLSession.shared.rx.json(request: request)
         return Observable.create { observer in
-            
             let request = NSMutableURLRequest(url: url)
             request.setValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
             

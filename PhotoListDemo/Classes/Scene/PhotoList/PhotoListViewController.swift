@@ -40,7 +40,7 @@ final class PhotoListViewController: UIViewController {
     }
     
     private func setupAppearance() {
-        title = "Photo List" //user name?
+        title = "Photo List"
         
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.navigationBar.barTintColor = .white
@@ -65,7 +65,7 @@ final class PhotoListViewController: UIViewController {
         
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
-        tableView.tableFooterView = UIView() //this call table events
+        tableView.tableFooterView = UIView()
         
         tableView.register(PhotoListTableViewCell.self, forCellReuseIdentifier: "PhotoListTableViewCell")
     }
@@ -146,7 +146,6 @@ extension PhotoListViewController: UISearchBarDelegate {
 }
 
 extension PhotoListViewController: UISearchResultsUpdating {
-    //boilerplate function
     func updateSearchResults(for searchController: UISearchController) {
         //print("updateSearchResults=\(searchController.searchBar.text)")
     }

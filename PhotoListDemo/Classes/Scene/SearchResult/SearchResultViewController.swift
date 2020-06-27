@@ -42,7 +42,7 @@ final class SearchResultViewController: UIViewController {
         
         tableView.separatorStyle = .none
         tableView.backgroundColor = .white
-        tableView.tableFooterView = UIView() //this call table events
+        tableView.tableFooterView = UIView() 
         
         tableView.register(PhotoListTableViewCell.self, forCellReuseIdentifier: "PhotoListTableViewCell")
     }

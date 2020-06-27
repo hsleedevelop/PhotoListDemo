@@ -19,10 +19,5 @@ enum NetworkError: Error {
             return message
         }
     }
-    
-    ///특정 에러의 경우, 액션을 취할 수도 있음
-    func action() {
-        
-    }
 }
 
